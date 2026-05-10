@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Button Click Counter</title></head>
+<body>
+    <button onclick="increment()">Click Me!</button>
+    <p id="display">Button clicked 0 times</p>
+    <script>
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById("display").innerText = "Button clicked " + count + " times";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Form Validation</title></head>
+<body>
+    <form onsubmit="return validateForm()">
+        Username: <input type="text" id="username"><br><br>
+        Password: <input type="password" id="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        function validateForm() {
+            let u = document.getElementById("username").value;
+            let p = document.getElementById("password").value;
+            if (u == "" || p == "") { alert("Empty fields are not allowed!"); return false; }
+            return true;
+        }
+    </script>
+</body>
+</html>

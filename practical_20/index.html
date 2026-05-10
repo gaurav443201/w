@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Simple Age Check</title></head>
+<body>
+    <input type="number" id="age" placeholder="Enter age">
+    <button onclick="checkAge()">Check</button>
+    <p id="result"></p>
+    <script>
+        function checkAge() {
+            let age = document.getElementById("age").value;
+            
+            if (age >= 18) {
+                document.getElementById("result").innerText = "Eligible to vote";
+            } else {
+                document.getElementById("result").innerText = "Not eligible";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greeting Message (Compromise)</title>
+<style>
+    body { font-family: Arial, sans-serif; text-align: center; padding-top: 100px; }
+    h1 { color: darkblue; }
+    .box { border: 2px solid darkblue; padding: 20px; width: 400px; margin: 0 auto; background-color: lightyellow; }
+</style>
+</head>
+<body>
+    <div class="box">
+        <h1 id="greeting"></h1>
+        <p>Welcome to Web Dev Practicals, Gaurav!</p>
+    </div>
+    <script>
+        let hour = new Date().getHours();
+        let msg = "";
+        
+        if (hour < 12) {
+            msg = "Good Morning!";
+        } else if (hour < 17) {
+            msg = "Good Afternoon!";
+        } else {
+            msg = "Good Evening!";
+        }
+        
+        document.getElementById("greeting").innerText = msg;
+    </script>
+</body>
+</html>

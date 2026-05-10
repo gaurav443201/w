@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subject List with Nested Table (Better)</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 30px; background-color: #fafafa; }
+    h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; display: inline-block; }
+    ul { list-style-type: square; font-size: 18px; color: #34495e; }
+    li { margin-bottom: 15px; }
+    table { border-collapse: collapse; margin-top: 10px; width: 300px; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    th { background-color: #27ae60; color: white; padding: 8px; }
+    td { padding: 8px; text-align: center; border: 1px solid #ddd; }
+</style>
+</head>
+<body>
+    <h2>Computer Engineering Subjects</h2>
+    <ul>
+        <li>Data Structures</li>
+        <li>Database Management Systems
+            <table>
+                <tr><th>Theory Marks</th><th>Practical Marks</th></tr>
+                <tr><td>70</td><td>30</td></tr>
+            </table>
+        </li>
+        <li>Operating Systems</li>
+    </ul>
+</body>
+</html>

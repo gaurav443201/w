@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiplication Table (Better)</title>
+<style>
+    body { font-family: Arial; text-align: center; background: #fafafa; padding-top: 40px; }
+    .container { display: inline-block; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    input { padding: 10px; font-size: 16px; width: 150px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 10px 20px; font-size: 16px; background: #9b59b6; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px; }
+    button:hover { background: #8e44ad; }
+    .table-result { margin-top: 20px; font-size: 18px; line-height: 1.8; color: #333; background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee; text-align: left; display: inline-block;}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Generate Table</h2>
+        <input type="number" id="num" placeholder="Enter a number">
+        <button onclick="showTable()">Generate</button>
+        <br>
+        <div id="tableDiv" class="table-result" style="display:none;"></div>
+    </div>
+    <script>
+        function showTable() {
+            let n = document.getElementById("num").value;
+            let div = document.getElementById("tableDiv");
+            if(n === "") return;
+            div.style.display = "inline-block";
+            let html = "<strong>Table of " + n + "</strong><br><hr>";
+            for (let i = 1; i <= 10; i++) {
+                html += n + " x " + i + " = <strong>" + (n * i) + "</strong><br>";
+            }
+            div.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
